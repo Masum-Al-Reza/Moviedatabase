@@ -8,22 +8,22 @@ import androidx.room.PrimaryKey;
 public class Comment_pojo {
     @PrimaryKey(autoGenerate = true)
     private long coomment_id;
-    private long m_id;
-    private long u_id;
+    private long comment_m_ids;
+    private long comment_u_id;
     private String coment;
     private long status;
 @Ignore
-    public Comment_pojo(long coomment_id, long m_id, long u_id, String coment, long status) {
+    public Comment_pojo(long coomment_id, long comment_m_ids, long comment_u_id, String coment, long status) {
         this.coomment_id = coomment_id;
-        this.m_id = m_id;
-        this.u_id = u_id;
+        this.comment_m_ids = comment_m_ids;
+        this.comment_u_id = comment_u_id;
         this.coment = coment;
         this.status = status;
     }
 
-    public Comment_pojo(long m_id, long u_id, String coment, long status) {
-        this.m_id = m_id;
-        this.u_id = u_id;
+    public Comment_pojo(long comment_m_ids, long comment_u_id, String coment, long status) {
+        this.comment_m_ids = comment_m_ids;
+        this.comment_u_id = comment_u_id;
         this.coment = coment;
         this.status = status;
     }
@@ -36,20 +36,28 @@ public class Comment_pojo {
         this.status = status;
     }
 
-    public long getM_id() {
-        return m_id;
+    public long getComment_m_ids() {
+        return comment_m_ids;
     }
 
-    public void setM_id(long m_id) {
-        this.m_id = m_id;
+    public void setComment_m_ids(long comment_m_ids) {
+        this.comment_m_ids = comment_m_ids;
     }
 
-    public long getU_id() {
-        return u_id;
+    public long getComment_u_id() {
+        return comment_u_id;
     }
 
-    public void setU_id(long u_id) {
-        this.u_id = u_id;
+    public void setComment_u_id(long comment_u_id) {
+        this.comment_u_id = comment_u_id;
+    }
+
+    public long getcomment_u_id() {
+        return comment_u_id;
+    }
+
+    public void setcomment_u_id(long comment_u_id) {
+        this.comment_u_id = comment_u_id;
     }
 
     public String getComent() {

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.Authentication">
+    tools:context=".user_activity.Authentication">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,37 +14,40 @@
         android:layout_marginTop="200dp">
 
         <EditText
+            android:id="@+id/Usernameinput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Username"
-            android:id="@+id/Usernameinput"/>
+            android:hint="@string/enter_username" />
+
         <EditText
+            android:id="@+id/emailaddressinput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter email"
             android:layout_below="@id/Usernameinput"
-            android:id="@+id/emailaddressinput"/>
+            android:hint="@string/enter_email" />
+
         <EditText
+            android:id="@+id/phonenumberinput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Phonenumber"
             android:layout_below="@id/emailaddressinput"
-            android:id="@+id/phonenumberinput"/>
+            android:hint="@string/enter_phonenumber" />
+
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter password"
             android:id="@+id/password1input"
-            android:layout_below="@id/phonenumberinput"/>
-        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="confirm password"
+            android:layout_below="@id/phonenumberinput"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword" />
 
+        <EditText
             android:id="@+id/password2input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@id/password1input"
-            />
-
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword" />
 
 
     </RelativeLayout>
@@ -52,8 +56,8 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:onClick="register"/>
+        android:onClick="register"
+        android:text="Register" />
 
 
 </LinearLayout>

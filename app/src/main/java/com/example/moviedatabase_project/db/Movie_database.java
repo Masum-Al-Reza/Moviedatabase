@@ -17,17 +17,17 @@ import com.example.moviedatabase_project.entities.Movie_pojo;
 import com.example.moviedatabase_project.entities.Rating_pojo;
 import com.example.moviedatabase_project.entities.User_pojo;
 
-@Database(entities = {Catagory_pojo.class, Comment_pojo.class, Movie_pojo.class, Rating_pojo.class, User_pojo.class},version =1 )
+@Database(entities = {Catagory_pojo.class, Comment_pojo.class, Movie_pojo.class, Rating_pojo.class, User_pojo.class},version =3 )
 public abstract class Movie_database extends RoomDatabase {
-private  static  Movie_database db;
-public  abstract Catagory_dao getcatagory_dao();
-public  abstract Comment_dao getcomment_dao();
-public  abstract Movie_dao getmovie_dao();
-public  abstract Rating_dao getrating_dao();
-public  abstract User_dao getuser_dao();
+    private  static  Movie_database db;
+    public  abstract Catagory_dao getcatagory_dao();
+    public  abstract Comment_dao getcomment_dao();
+    public  abstract Movie_dao getmovie_dao();
+    public  abstract Rating_dao getrating_dao();
+    public  abstract User_dao getuser_dao();
     public static Movie_database getInstance(Context context){
         if (db==null){
-            db= Room.databaseBuilder(context,Movie_database.class,"movie_database")
+            db= Room.databaseBuilder(context,Movie_database.class,"movie_database").fallbackToDestructiveMigration()
                     .allowMainThreadQueries().build();
             return db;
 

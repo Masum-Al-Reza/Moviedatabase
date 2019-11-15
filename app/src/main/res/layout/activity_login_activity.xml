@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".user_activity.Login_activity">
+
+    <EditText
+        android:id="@+id/username_email_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_username_logged" />
+
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_password_loged" />
+
+    <Button
+        android:id="@+id/logged"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="logged"
+        android:text="@string/login" />
+
+    <Button
+        android:id="@+id/Cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Not Register yet"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:text="Register now"
+        android:textSize="18sp" />
+
+
+</LinearLayout>

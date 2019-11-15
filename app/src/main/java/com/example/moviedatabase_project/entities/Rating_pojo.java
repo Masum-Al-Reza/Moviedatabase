@@ -8,20 +8,20 @@ import androidx.room.PrimaryKey;
 public class Rating_pojo {
     @PrimaryKey(autoGenerate = true)
     private long rating_id;
-    private long m_id;
-    private  long u_id;
+    private long Rating_m_id;
+    private  long Rating_u_id;
     private float rating;
 @Ignore
-    public Rating_pojo(long rating_id, long m_id, long u_id, float rating) {
+    public Rating_pojo(long rating_id, long Rating_m_id, long Rating_u_id, float rating) {
         this.rating_id = rating_id;
-        this.m_id = m_id;
-        this.u_id = u_id;
+        this.Rating_m_id = Rating_m_id;
+        this.Rating_u_id = Rating_u_id;
         this.rating = rating;
     }
 
-    public Rating_pojo(long m_id, long u_id, float rating) {
-        this.m_id = m_id;
-        this.u_id = u_id;
+    public Rating_pojo(long Rating_m_id, long Rating_u_id, float rating) {
+        this.Rating_m_id = Rating_m_id;
+        this.Rating_u_id = Rating_u_id;
         this.rating = rating;
     }
 
@@ -33,20 +33,20 @@ public class Rating_pojo {
         this.rating_id = rating_id;
     }
 
-    public long getM_id() {
-        return m_id;
+    public long getRating_m_id() {
+        return Rating_m_id;
     }
 
-    public void setM_id(long m_id) {
-        this.m_id = m_id;
+    public void setRating_m_id(long Rating_m_id) {
+        this.Rating_m_id = Rating_m_id;
     }
 
-    public long getU_id() {
-        return u_id;
+    public long getRating_u_id() {
+        return Rating_u_id;
     }
 
-    public void setU_id(long u_id) {
-        this.u_id = u_id;
+    public void setRating_u_id(long Rating_u_id) {
+        this.Rating_u_id = Rating_u_id;
     }
 
     public float getRating() {

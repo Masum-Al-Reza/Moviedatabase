@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.moviedatabase_project">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,14 +17,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Manage_users_activity"></activity>
+        <activity android:name=".user_activity.Login_activity"></activity>
+        <activity android:name=".activity.Details_actviity" />
+        <activity android:name=".activity.Moviedetails_activity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.moviedatabase_project"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".activity.Manage_user_activity" />
         <activity android:name=".activity.View_pending_comments_activity" />
         <activity android:name=".activity.View_all_catagories_activity" />
         <activity android:name=".activity.View_all_movies_activity" />
-        <activity android:name=".Add_movie_activity" />
-        <activity android:name=".Catagory_activity" />
-        <activity android:name=".Dashboard_activiity" />
-        <activity android:name=".activity.Authentication" />
+        <activity android:name=".activity.Add_movie_activity" />
+        <activity android:name=".activity.Catagory_activity" />
+        <activity android:name=".activity.Dashboard_activiity"></activity>
+        <activity android:name=".user_activity.Authentication" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

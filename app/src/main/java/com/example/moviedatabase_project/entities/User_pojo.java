@@ -4,6 +4,8 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.util.List;
+
 @Entity(tableName = "tbl_user")
 public class User_pojo {
     @PrimaryKey(autoGenerate = true)
@@ -12,6 +14,7 @@ public class User_pojo {
     private String u_number;
     private String u_email;
     private String u_password;
+
 @Ignore
     public User_pojo(long u_id, String u_name, String u_number, String u_email, String u_password) {
         this.u_id = u_id;

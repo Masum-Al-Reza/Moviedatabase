@@ -1,3 +1,27 @@
 <resources>
-    <string name="app_name">Moviedatabase_project</string>
+    <string name="app_name">Moviedatabse_project</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_email">Enter email</string>
+    <string name="enter_phonenumber">Enter Phonenumber</string>
+    <string name="enter_password">Enter password</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="enter_username_logged">enter username</string>
+    <string name="enter_password_loged">enter password</string>
+    <string name="login">LOgin</string>
+    <string name="userdetails">Name :\nEmail :\n Phone number :\nPassword :\n</string>
+    <string name="delete">delete</string>
+    <string name="update">update</string>
+
+    <string-array name="Movies">
+        <item>Action</item>
+        <item>Thriller</item>
+        <item>Horror</item>
+        <item>Romantic</item>
+        <item>Science fiction</item>
+        <item>Comedy</item>
+        <item>Historical</item>
+        <item>Crime</item>
+        <item>Animated</item>
+
+    </string-array>
 </resources>

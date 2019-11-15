@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context=".activity.Details_actviity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        >
+
+        <ImageView
+            android:id="@+id/details_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <TextView
+            android:id="@+id/name_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/deleteUSerli" />
+
+        <TextView
+            android:id="@+id/year_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/name_details" />
+
+        <TextView
+            android:id="@+id/type_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/year_details" />
+
+
+        <TextView
+            android:id="@+id/Rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/year_details"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Rating"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Rating"
+            android:layout_marginStart="63dp"
+            android:layout_marginTop="40dp"
+            android:numStars="5"
+            android:rating="2.0"
+            android:stepSize="1" />
+
+        <Button
+            android:id="@+id/updateuserlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="updatelist"
+            android:layout_below="@id/details_image"
+            android:text="@string/update"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/deleteUSerli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="deletelist"
+            android:text="@string/delete"
+            android:layout_below="@id/updateuserlist"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/commentsET"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_below="@id/Rating"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="-4dp"
+            android:layout_marginTop="109dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/commentsbtn"
+            android:layout_width="120dp"
+            android:layout_height="38dp"
+            android:onClick="comments"
+            android:layout_below="@id/commentsET"
+            android:text="Comment" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comment_recyclerlist"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_below="@id/commentsbtn"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="572dp">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</ScrollView>
